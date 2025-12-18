@@ -7,22 +7,21 @@ public class Fibonacci {
     static void main(String[] args) {
         System.out.println("Enter a number for n: ");
         Scanner scans = new Scanner(System.in);
-        short num = scans.nextShort();
+        long num = scans.nextLong();
         if (num != 0) {
-            System.out.println(fibonacci(num));
+            fibonacci(num);
         }
         scans.close();
     }
-    static ArrayList<Short> fibonacci(short num){
-        ArrayList<Short> list = new ArrayList<>();
-       list.add((short) 0);
-       list.add((short) 1);
-       byte nums = 0;
-       while (nums <= num - 3){
-         short fibbo = (short) (nums + (nums + 1));
-         list.add(fibbo);
-           nums++;
-       }
-        return list;
+    static void fibonacci(Long num){
+        int a = 0, b = 1;
+        System.out.print("Fibonacci Series: ");
+        for (int i = 1; i <= num; i++) {
+            System.out.print(a + (i < num ? " " : ""));
+            int next = a + b;
+            a = b;
+            b = next;
+        }
+
     }
 }

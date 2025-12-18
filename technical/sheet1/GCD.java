@@ -2,7 +2,6 @@ package InJava.technical.sheet1;
 
 import java.util.Scanner;
 import java.math.BigInteger;
-import java.util.Scanner;
 
 public class GCD {
 
